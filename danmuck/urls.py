@@ -14,10 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from pages.views import home_view, contact_view, ev_tracker_view, postal_view, about_view
-from products.views import product_detail_view, product_create_view, render_initial_data, product_delete_view, product_list_view
 from toodoo.views import all_toodoo_view, new_toodoo_view, toodoo_editor, main_toodoo_view, delete_toodoo_view
 
 #SCHOOL
@@ -31,19 +30,15 @@ urlpatterns = [
     path('ev_tracker/', ev_tracker_view, name='ev_tracker'),
     path('postal/', postal_view, name='postal'),
     path('about/', about_view, name='about'),
-#products[yt]
-    path('product/', product_detail_view, name='product'),
-    path('products/', product_list_view, name='products'),
-    path('products/<int:product_id>/', render_initial_data, name='render'),
-    path('products/<int:product_id>/delete/', product_delete_view, name='delete'),
-    
-    path('create/', product_create_view, name='create'),
+
 #todo
     path('todo/', main_toodoo_view, name='todo'),
     path('list/', all_toodoo_view, name='list'),
     path('new/', new_toodoo_view, name='new'),
     path('editor/<int:toodoo_id>/', toodoo_editor, name='editor'),
     path('delete/<int:toodoo_id>/', delete_toodoo_view, name='delete'),
+#apps
+    path('products/', include('products.urls')),
 
 #SCHOOL
 
