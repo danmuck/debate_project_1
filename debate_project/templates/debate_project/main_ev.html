@@ -5,10 +5,13 @@ ev_home:
 {% endblock %}
 
 {% block content %}
+<br>
 <a href="/evidence/"> LIST </a><br>
 <a href="/new_ev/"> NEW </a><br>
 <a href="/delete_ev/1/"> DEL </a><br>
 <a href="/ev_editor/1/"> EDIT </a>
+<br>
+<hr>
 
 <h1>{{ object.title }}</h1>
 <p>{% if object.description %} 

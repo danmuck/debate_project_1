@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block title %}
-new-evidence:
+ev_EDIT:
 {% endblock %}
 
 {% block content %}
 <br>
-<h2>New Item</h2>
+<h2>ev_EDIT: </h2>
 <form method='POST'>
     {% csrf_token %}
     {{ form.as_p }}

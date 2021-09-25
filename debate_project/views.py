@@ -30,7 +30,7 @@ def delete_ev_view(request, ev_id):
     obj = get_object_or_404(Evidence, id=ev_id)
     if request.method == 'POST':
         obj.delete()
-        return redirect('/todo/')
+        return redirect('/ev_home/')
     context = {
         'object': obj
     }
@@ -46,9 +46,7 @@ def all_ev_view(request):
 
 #edit items
 def ev_editor(request, ev_id):
-    initial_data = {
-        'title': 'New Evidence:'
-    }
+    initial_data = 'ev_EDIT:'
     try:
         obj = Evidence.objects.get(id=ev_id)
     except Evidence.DoesNotExist:
@@ -59,4 +57,4 @@ def ev_editor(request, ev_id):
     context = {
         'form': form
     }
-    return render(request, 'debate_project/new_ev.html', context)
+    return render(request, 'debate_project/new_ev.html', context, initial_data)

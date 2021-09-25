@@ -5,9 +5,9 @@ from django.urls import reverse
 
 class Evidence(models.Model):
     title       = models.CharField(max_length=50) #max length req
-    # date        = models.DateTimeField(_(""), auto_now=False, auto_now_add=False)
     description = models.TextField(blank=True, null=True)
-    complete    = models.BooleanField(default=False)
+    speaker     = models.CharField(max_length=50, null=True)
+    source      = models.URLField(max_length=200, default='n/a', null=True)
 
     def get_absolute_url(self):
         return f'/ev_editor/{self.id}'

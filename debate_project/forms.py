@@ -1,4 +1,5 @@
-from django import forms 
+from django import forms
+from django.forms.widgets import URLInput 
 
 from .models import Evidence
 
@@ -13,17 +14,32 @@ class EvidenceList(forms.ModelForm):
             label= '',
         widget=forms.Textarea(
             attrs={
-                'class': 'new class name',
-                'placeholder': 'ToDo:',
-                'rows': '5',
+                'class': 'Evidence',
+                'placeholder': 'Evidence:',
+                'rows': 10,
                 'cols': 80
             }))
+    speaker = forms.CharField(
+        label='',
+        widget=forms.TextInput(
+            attrs={
+                'placeholder': 'Speaker:'
+            }))
+    source = forms.URLField(
+        label='',
+        widget=forms.URLInput(
+            attrs={
+                'placeholder': 'url'
+            }
+        )
+    )
 
     class Meta:
         model = Evidence
         fields = [
             'title',
             'description',
-            # 'date'
+            'speaker',
+            'source'
         ]
 
