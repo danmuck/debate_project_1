@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+all-ToDo:
+{% endblock %}
+
+{% block content %}
+<br>
+{% for instance in object_list%}
+    <p>{{ instance.id }}. <a href="{{ instance.get_absolute_url }}" class='fs-3 badge badge-success' style='None'>{{ instance.title }} </a>
+    <br>
+        <a href="/delete/{{ instance.id}}" class='fs-6'>[ DEL ]</a></p>
+{% endfor %}
+
+{% endblock %}

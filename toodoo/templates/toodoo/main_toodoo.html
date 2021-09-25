@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ToDo:
+{% endblock %}
+
+{% block content %}
+<a href="/list/"> LIST </a><br>
+<a href="/new/"> NEW </a><br>
+<a href="/delete/1/"> DEL </a><br>
+<a href="/editor/1/"> EDIT </a>
+
+<h1>{{ object.title }}</h1>
+<p>{% if object.description %} 
+        {{ object.description }} 
+        {% else %} 
+        Coming Soon... 
+        {% endif %}</p>
+<p class="fs-4"> {{ object.date }} </p>
+
+{% endblock %}

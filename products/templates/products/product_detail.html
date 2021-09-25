@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+item:
+{% endblock %}
+
+{% block content %}
+<br>
+<a href="/products/"> LIST ALL </a><br>
+<a href="/create/"> NEW </a><br><br><hr><br>
+
+<h1 class='bg-success mx-4 ps-5 rounded'>{{ object.title }}</h1>
+<p class='p-3 mx-5 border-start border-end'>
+        {% if object.description %} 
+        {{ object.description }} 
+        {% else %} 
+        Coming Soon... 
+        {% endif %}</p>
+<p class="fs-4 bg-success mx-5 ps-2 rounded"> ${{ object.price }} </p>
+
+{% endblock %}

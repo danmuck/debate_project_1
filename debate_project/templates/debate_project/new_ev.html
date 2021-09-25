@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+new-evidence:
+{% endblock %}
+
+{% block content %}
+<br>
+<h2>New Item</h2>
+<form method='POST'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% comment %} <input type="text" name="title" placeholder="title"> {% endcomment %}
+    <input type="submit" value="save.">
+</form> 
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+new-ToDo:
+{% endblock %}
+
+{% block content %}
+<br>
+<h2>New Item</h2>
+<form method='POST'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% comment %} <input type="text" name="title" placeholder="title"> {% endcomment %}
+    <input type="submit" value="save.">
+    </form>
+</form> 
+
+{% comment %} <form action="http://www.google.com/search" method="get">
+    <input type="text" name="q" placeholder="your search">
+    <input type="submit" value="save.">
+</form> {% endcomment %}
+
+{% endblock %}

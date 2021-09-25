@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+new-product:
+{% endblock %}
+
+{% block content %}
+<br>
+<h2>Delete Item</h2>
+<form method='POST'>
+    {% csrf_token %}
+    delete: {{ object.title }}?
+    {% comment %} <input type="text" name="title" placeholder="title"> {% endcomment %}
+    <input type="submit" value="delete.">
+</form> 
+
+{% comment %} <form action="http://www.google.com/search" method="get">
+    <input type="text" name="q" placeholder="your search">
+    <input type="submit" value="save.">
+</form> {% endcomment %}
+
+{% endblock %}
