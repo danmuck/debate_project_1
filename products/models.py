@@ -13,4 +13,3 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse("render", kwargs={"product_id": self.id})
     
-
