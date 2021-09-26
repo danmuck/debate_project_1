@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+article:
+{% endblock %}
+
+{% block content %}
+<br>
+<a href="/postal/articles/"> LIST ALL </a>
+<br><br>
+{% comment %} <a href="/blog/create/"> NEW </a><br><br><hr><br> {% endcomment %}
+
+<h1 class='bg-success mx-4 ps-5 rounded'>{{ object.title }}</h1>
+<p class='p-3 mx-5 border-start'>
+        {% if object.subject %} 
+        {{ object.subject }} 
+        {% else %} 
+        n/a 
+        {% endif %}</p>
+<p class='p-3 mx-5'>
+        {% if object.blogpost %} 
+        {{ object.blogpost }} 
+        {% else %} 
+        Coming Soon... 
+        {% endif %}</p>
+<p class="fs-5 bg-secondary mx-5 p-2 rounded"> {{ object.date }} </p>
+
+{% endblock %}
