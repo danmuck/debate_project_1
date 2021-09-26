@@ -39,6 +39,8 @@ urlpatterns = [
     path('delete/<int:toodoo_id>/', delete_toodoo_view, name='delete'),
 #apps
     path('products/', include('products.urls')),
+    path('postal/', include('postal.urls')),
+
 
 #SCHOOL
 

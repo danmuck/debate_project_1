@@ -13,7 +13,7 @@ class ProductForm(forms.ModelForm):
             label= '',
         widget=forms.Textarea(
             attrs={
-                'class': 'new class name',
+                'class': 'description',
                 'placeholder': 'description',
                 'rows': '5',
                 'cols': 80

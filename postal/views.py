@@ -1,3 +1,36 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
+from django.views.generic.edit import DeleteView
+from .models import Article
+from .forms import ArticleForm
 
+from django.views.generic import (
+    CreateView,
+    DeleteView,
+    ListView,
+    UpdateView,
+    DetailView
+
+)
 # Create your views here.
+
+class ArticleListView(ListView):
+    queryset = Article.objects.all() # <app_name>/<model_name>_list.html #this is the default path it looks for template 
+    model = Article
+    template_name = "article_list.html"
+
+
+class ArticleDetailView(DetailView):
+    model = Article
+    template_name = "postal/article_detail.html"
+    # queryset = Article.objects.all()
+
+    def get_object(self):
+        id_ = self.kwargs.get('pk')
+        return get_object_or_404(Article, id=id_)
+
+
+
+
+
+
+
