@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic.edit import DeleteView
+from django.urls import reverse
 from .models import Article
 from .forms import ArticleForm
 
@@ -44,6 +45,16 @@ class ArticleUpdateView(UpdateView):
         id_ = self.kwargs.get('pk')
         return get_object_or_404(Article, id=id_)
 
+class ArticleDeleteView(DeleteView):
+    model = Article
+    template_name = "postal/article_delete.html"
+
+    def get_object(self):
+        id_ = self.kwargs.get('pk')
+        return get_object_or_404(Article, id=id_)
+
+    def get_success_url(self):
+        return reverse('postal:articles')
 
 
 
