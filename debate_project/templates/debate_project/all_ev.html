@@ -6,10 +6,26 @@ all-evidence:
 
 {% block content %}
 <br>
-{% for instance in object_list%}
-    <p>{{ instance.id }}. <a href="{{ instance.get_absolute_url }}" class='fs-3 badge badge-success' style='None'>{{ instance.title }} </a>
+{% for instance in object_list %}
+<p>{{ instance.id }}. <a href="{{ instance.get_absolute_url }}" class='fs-2 badge badge-success' style='None'>{{ instance.title }} </a>
     <br>
-        <a href="/delete/{{ instance.id}}" class='fs-6'>[ DEL ]</a></p>
+    <p>{% if instance.description %} 
+            {{ instance.description }} 
+            {% else %} 
+            Coming Soon... 
+            {% endif %}</p>
+
+    {% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' %}
+            <p class="fs-4 text-danger">{{ instance.speaker }} </p>
+            {% elif instance.speaker == 'Roger McNamee' or instance.speaker == 'Franklin Foer'%}
+            <p class="fs-4 text-info">{{ instance.speaker }} </p>
+            {% else %}
+            <p class="fs-4 text-dark">{{ instance.speaker }} </p>
+            {% endif %}
+
+    <p class="fs-4"> {{ instance.date }} </p>
+            <a href="/delete/{{ instance.id}}" class='fs-6'>[ DEL ]</a>
+</p>
 {% endfor %}
 
 {% endblock %}

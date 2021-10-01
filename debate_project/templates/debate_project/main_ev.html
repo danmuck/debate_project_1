@@ -19,6 +19,15 @@ ev_home:
         {% else %} 
         Coming Soon... 
         {% endif %}</p>
+
+{% if object.speaker == 'Emily Parker' or object.speaker == 'Jeff Jarvis' %}
+        <p class="fs-4 text-danger">{{ object.speaker }} </p>
+        {% elif object.speaker == 'Roger McNamee' or object.speaker == 'Franklin Foer'%}
+        <p class="fs-4 text-info">{{ object.speaker }} </p>
+        {% else %}
+        <p class="fs-4 text-dark">{{ object.speaker }} </p>
+        {% endif %}
+
 <p class="fs-4"> {{ object.date }} </p>
 
 {% endblock %}
