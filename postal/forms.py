@@ -6,7 +6,8 @@ class ArticleForm(forms.ModelForm):
         label= '',
         widget= forms.TextInput(
             attrs={
-                
+                'class': 'title',
+                'placeholder': 'subject',                
             }
         )
     )
@@ -15,6 +16,8 @@ class ArticleForm(forms.ModelForm):
         required=False,
         widget= forms.TextInput(
             attrs={
+                'class': 'subject',
+                'placeholder': 'subject',
                 
             }
         )
@@ -25,6 +28,7 @@ class ArticleForm(forms.ModelForm):
         widget= forms.Textarea(
             attrs={
                 'class': 'blogpost',
+                'placeholder': 'blog-post:',
                 'rows': 10,
                 'cols': 100,
             }
