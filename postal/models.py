@@ -10,7 +10,7 @@ class Article(models.Model):
     blogpost    = models.TextField()
     
     def get_absolute_url(self):
-        return reverse("postal:articles", kwargs={"pk": self.pk})
+        return reverse("postal:article-detail", kwargs={"pk": self.pk})
 
     class Meta:
         verbose_name = ("article")

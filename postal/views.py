@@ -19,7 +19,7 @@ class ArticleListView(ListView):
     template_name = "postal/article_list.html"
 
 class ArticleCreateView(CreateView):
-    queryset = Article.objects.all() # <app_name>/<model_name>_list.html #this is the default path it looks for template 
+    queryset = Article.objects.all() # <app_name>/<model_name>_create.html #this is the default path it looks for template 
     model = Article
     form_class = ArticleForm
     template_name = "postal/article_create.html"
@@ -34,7 +34,15 @@ class ArticleDetailView(DetailView):
         id_ = self.kwargs.get('pk')
         return get_object_or_404(Article, id=id_)
 
+class ArticleUpdateView(UpdateView):
+    queryset = Article.objects.all() # <app_name>/<model_name>_update.html #this is the default path it looks for template 
+    model = Article
+    form_class = ArticleForm
+    template_name = "postal/article_update.html"
 
+    def get_object(self):
+        id_ = self.kwargs.get('pk')
+        return get_object_or_404(Article, id=id_)
 
 
 
