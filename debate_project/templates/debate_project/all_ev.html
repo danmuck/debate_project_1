@@ -8,11 +8,14 @@ all-evidence:
 <br>
 {% for instance in object_list %}
 <br>
-<div class="container bg-secondary rounded">
-<p class="">{{ instance.id }}. <a href="{{ instance.get_absolute_url }}" class='fs-2 badge badge-success' style='None'>{{ instance.title }} </a>
+<div class="container bg-secondary rounded p-3">
+<p class="">{{ instance.id }}. 
+<h2 class="fs-3 "> 
+{{ instance.title }}
+</h2> 
     <br>
     <p>{% if instance.description %} 
-            {{ instance.description }} 
+            {{ instance.description|linebreaks }} 
             {% else %} 
             Coming Soon... 
             {% endif %}</p>
@@ -26,8 +29,13 @@ all-evidence:
             <p class="fs-4 text-dark">{{ instance.speaker }} </p>
             {% endif %}
 
-    <p class="fs-6"> {{ instance.source }} </p>
-<a href="/delete/{{ instance.id}}" class='fs-6 text-dark'>[ DEL ]</a>
+    <p class="fs-6 container-fluid text-dark">  
+        <a href="{{ instance.source }}" class=''> [source] </a> 
+
+        <div class='text-end'><a href="/delete/{{ instance.id }}" class='fs-6 text-dark'>[ DEL ]</a>
+            <a href="{{ instance.get_absolute_url }}" class='fs-6 text-dark' style='None'> [EDIT] </a>
+         </div> 
+    </p>
 </p>
 </div>
 {% endfor %}

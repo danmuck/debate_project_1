@@ -5,14 +5,19 @@ ToDo:
 {% endblock %}
 
 {% block content %}
-<a href="/list/"> LIST </a><br>
-<a href="/new/"> NEW </a><br>
-<a href="/delete/1/"> DEL </a><br>
-<a href="/editor/1/"> EDIT </a>
+<br>
+<div class="container text-center text-warning">
+<a href="/list/"> [INDEX] </a>
+<a href="/new/"> [NEW] </a>
+ :|:
+<a href="/delete/1/"> [DEL] </a>
+<a href="/editor/1/"> [EDIT] </a>
+</div>
+<hr>
 
 <h1>{{ object.title }}</h1>
 <p>{% if object.description %} 
-        {{ object.description }} 
+        {{ object.description|linenumbers|linebreaksbr }} 
         {% else %} 
         Coming Soon... 
         {% endif %}</p>

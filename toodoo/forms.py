@@ -15,7 +15,7 @@ class TooDooList(forms.ModelForm):
             attrs={
                 'class': 'new class name',
                 'placeholder': 'ToDo:',
-                'rows': '5',
+                'rows': '22',
                 'cols': 80
             }))
 
