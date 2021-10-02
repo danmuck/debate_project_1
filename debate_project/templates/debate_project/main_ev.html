@@ -28,7 +28,7 @@ ev_home:
 
 <h1>{{ object.title }}</h1>
 <p>{% if object.description %} 
-        {{ object.description }} 
+        {{ object.description|linebreaksbr }} 
         {% else %} 
         Coming Soon... 
         {% endif %}</p>
