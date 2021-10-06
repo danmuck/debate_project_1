@@ -23,10 +23,10 @@ from toodoo.views import all_toodoo_view, new_toodoo_view, toodoo_editor, main_t
 from debate_project.views import all_ev_view, new_ev_view, main_ev_view, delete_ev_view, ev_editor
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', home_view, name='home'),
     path('home/', home_view, name='home'),
     path('contact/', contact_view, name='contact'),
-    path('admin/', admin.site.urls),
     path('ev_tracker/', ev_tracker_view, name='ev_tracker'),
     path('postal/', postal_view, name='postal'),
     path('about/', about_view, name='about'),
