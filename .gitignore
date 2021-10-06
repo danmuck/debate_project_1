@@ -1,6 +1,8 @@
 *.pyc  
 *~  
 *.swp
+*.log
+local_settings.py
 __pycache__  
 myvenv
 venv/  
@@ -10,4 +12,4 @@ db.sqlite3
 .DS_Store
 .env
 mymedia/
-*NOTES.md`
+*NOTES.md
