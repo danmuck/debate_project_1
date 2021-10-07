@@ -48,6 +48,7 @@ class EvidenceList(forms.ModelForm):
         fields = [
             'title',
             'description',
+            'my_notes',
             'speaker',
             'source'
         ]
