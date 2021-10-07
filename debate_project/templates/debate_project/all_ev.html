@@ -71,7 +71,11 @@ all-evidence:
                   <a href="/ev_editor/{{ instance.id }}" class="list-group-item list-group-item-action bg-light">
                     <div class="d-flex w-100 justify-content-between">
                       
-                      <h5 class="mb-1 text-danger">[--- {{ instance.title|linebreaks }} ---]</h5>
+                      <h5 class="mb-1 text-danger">[---
+
+                      {{ instance.title|linebreaks }} 
+                      
+                      ---]</h5>
 
                     </div>
                     <hr>
@@ -142,7 +146,11 @@ all-evidence:
                   <a href="/ev_editor/{{ instance.id }}" class="list-group-item list-group-item-action bg-light">
                     <div class="d-flex w-100 justify-content-between">
                       
-                      <h5 class="mb-1 text-info">[--- {{ instance.title|linebreaks}} ---]</h5>
+                      <h5 class="mb-1 text-info">[--- 
+                      
+                      {{ instance.title|linebreaks}} 
+                      
+                      ---]</h5>
 
                     </div>
                     <hr>
