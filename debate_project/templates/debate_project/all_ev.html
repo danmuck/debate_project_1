@@ -142,14 +142,12 @@ all-evidence:
     {% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' or instance.speaker == 'FOR' %}
             <p class="fs-4 text-danger">{{ instance.speaker }} </p>
             {% elif instance.speaker == 'Roger McNamee' or instance.speaker == 'Franklin Foer' or instance.speaker == 'AGAINST' %}
-            <p class="fs-4 text-info">{{ instance.speaker }} </p>
+            <p class="fs-4 text-info">{{ instance.speaker }} <a href="{{ instance.source }}" class='bg-dark text-light rounded-pill p-2' style='none'>  {{ instance.source }}  </a> </p>
             {% else %}
-            <p class="fs-4 text-dark">{{ instance.speaker }} </p>
+            <p class="fs-4 text-dark">{{ instance.speaker }} <a href="{{ instance.source }}" class='bg-dark text-light rounded-pill p-2' style='none'>  {{ instance.source }}  </a> </p>
             {% endif %}
 
     <p class="fs-6 container-fluid text-dark">  
-        <a href="{{ instance.source }}" class='bg-dark text-light rounded-pill p-2' style='none'>  source  </a> 
-
         <div class='text-end'><a href="/delete_ev/{{ instance.id }}" class='fs-6 text-dark'>[ DEL ]</a>
             <a href="{{ instance.get_absolute_url }}" class='fs-6 text-dark' style='None'> [EDIT] </a>
          </div> 
