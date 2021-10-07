@@ -13,7 +13,7 @@ all-evidence:
     <div class="container">
         <h2 class="fs-4 text-center text-light"> moderated by john donvan</h2>
         <article class="row mb-2">
-            <div class="container for-motion col-sm bg-danger mb-2 pb-2">
+            <div class="container for-motion col-sm bg-danger mb-2 pb-4">
                 <h2 class='text-center'>for-motion:</h2>
                 <h3 class='fs-4'>jeff jarvis <br> emily parker </h3>
                 <hr>
@@ -56,7 +56,7 @@ all-evidence:
                 </div>
             </div>
 {% comment %} #AGAINST {% endcomment %}
-            <div class="container against-motion col-sm bg-info mb-2 pb-2">
+            <div class="container against-motion col-sm bg-info mb-2 pb-4">
                 <h2 class='text-center'>against-motion:</h2>
                 <h3 class='fs-4'>franklin foer <br> roger mcnamee </h3>
                 <hr>     
@@ -114,7 +114,7 @@ all-evidence:
 <div class="container bg-secondary rounded p-3">
 <p class="">{{ instance.id }}. 
 <h2 class="fs-3 "> 
-{{ instance.title }}
+{{ instance.title|linebreaks }}
 </h2> 
     <br>
     <p>{% if instance.description %} 
@@ -124,16 +124,16 @@ all-evidence:
             {% endif %}</p>
 
 <br>
-    {% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' %}
+    {% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' or instance.speaker == 'FOR' %}
             <p class="fs-4 text-danger">{{ instance.speaker }} </p>
-            {% elif instance.speaker == 'Roger McNamee' or instance.speaker == 'Franklin Foer'%}
+            {% elif instance.speaker == 'Roger McNamee' or instance.speaker == 'Franklin Foer' or instance.speaker == 'AGAINST' %}
             <p class="fs-4 text-info">{{ instance.speaker }} </p>
             {% else %}
             <p class="fs-4 text-dark">{{ instance.speaker }} </p>
             {% endif %}
 
     <p class="fs-6 container-fluid text-dark">  
-        <a href="{{ instance.source }}" class=''> [source] </a> 
+        <a href="{{ instance.source }}" class=''> [{{ instance.source }}] </a> 
 
         <div class='text-end'><a href="/delete_ev/{{ instance.id }}" class='fs-6 text-dark'>[ DEL ]</a>
             <a href="{{ instance.get_absolute_url }}" class='fs-6 text-dark' style='None'> [EDIT] </a>
