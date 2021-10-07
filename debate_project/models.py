@@ -7,7 +7,6 @@ class Evidence(models.Model):
     title       = models.CharField(max_length=1005) #max length req
     description = models.TextField(blank=True, null=True)
     my_notes    = models.TextField(blank=True, null=True)
-    opposed     = models.TextField(blank=True, null=True)
     speaker     = models.CharField(max_length=50, null=True, default='n/a')
     source      = models.URLField(max_length=200, default='n/a', null=True)
 
