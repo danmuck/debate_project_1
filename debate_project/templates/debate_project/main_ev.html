@@ -12,12 +12,12 @@ ev_home:
 <a href="/new_ev/"> [NEW] </a>
  :|:
 
-{% for group in request.user.groups.all %}
-    {% if group.name == 'admin' %}
+{% if request.user.groups.admin %}
+
 <a href="#"> [DEL] </a>
 <a href="/ev_editor/2/"> [EDIT] </a>
-    {% endif %}
-{% endfor %}
+{% endif %}
+
 
 </div>
 
