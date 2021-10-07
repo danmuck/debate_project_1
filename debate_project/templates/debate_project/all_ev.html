@@ -27,7 +27,9 @@ all-evidence:
                   <div class="list-group-item border-dark bg-light">
                     <div class="d-flex w-100 justify-content-between">
                       
-                      <h5 class="mb-1 text-danger">[---
+                      <h5 class="mb-1 text-danger">
+                      <br>
+                      [---
                       <br><br>
 
                       {{ instance.title|linebreaks }} 
@@ -70,7 +72,9 @@ all-evidence:
                   <div class="list-group-item border-dark bg-light">
                     <div class="d-flex w-100 justify-content-between">
                       
-                      <h5 class="mb-1 text-info">[---
+                      <h5 class="mb-1 text-info">
+                      <br>
+                      [---
                       <br><br> 
                       
                       {{ instance.title|linebreaks}} 
@@ -149,12 +153,13 @@ all-evidence:
             {% else %}
             <p class="fs-4 p-3 bg-dark text-dark rounded-pill">{{ instance.speaker }} <a href="{{ instance.source }}" class=' fs-6 bg-dark text-light mx-auto' style='none'>  {{ instance.source }}  </a> </p>
             {% endif %}
-
+    {% if user.username.danmuck %}
     <p class="fs-6 container-fluid text-dark">  
         <div class='text-end'><a href="/delete_ev/{{ instance.id }}" class='fs-6 text-dark'>[ DEL ]</a>
             <a href="{{ instance.get_absolute_url }}" class='fs-6 text-dark' style='None'> [EDIT] </a>
          </div> 
     </p>
+    {% endif %}
 </p>
 </div>
 {% endfor %}
