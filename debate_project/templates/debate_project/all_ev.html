@@ -48,7 +48,7 @@ all-evidence:
                         </figure>
 
 
-                    <a href="{{ instance.source }}"><small class="text-muted link-light"> {{ instance.source }}</small></a>
+                    <a href="{{ instance.source }}"><small class="text-secondary"> {{ instance.source }}</small></a>
                   </div>
 {% endif %}
 {% endfor %}
@@ -67,7 +67,7 @@ all-evidence:
 {% comment %} #FOR {% endcomment %}
 {% if instance.speaker == 'Roger McNamee' or instance.speaker == 'Franklin Foer' or instance.speaker == 'AGAINST' %}
 
-                  <a href="{{ instance.source }}" class="list-group-item border-dark bg-light">
+                  <div class="list-group-item border-dark bg-light">
                     <div class="d-flex w-100 justify-content-between">
                       
                       <h5 class="mb-1 text-info">[---
@@ -91,8 +91,9 @@ all-evidence:
                         </figure>
 
 
-                    <small class="text-muted"> {{ instance.source }}</small>
-                  </a>
+                    <a href="{{ instance.source }}"><small class="text-secondary"> {{ instance.source }}</small></a>
+                  </div>
+
 {% endif %}
 {% endfor %}
 
