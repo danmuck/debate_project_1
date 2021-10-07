@@ -123,9 +123,15 @@ all-evidence:
 {% endif %}
     <br>
     <div class='bg-dark text-light rounded p-2'>{% if instance.description %} 
-            {{ instance.description|linebreaks }} 
+            info: {{ instance.description|linebreaks }} 
             {% else %} 
-            Coming Soon... 
+            no info... 
+            {% endif %}</div>
+
+    <div class='bg-dark text-light rounded p-2'>{% if instance.my_notes %} 
+            notes: {{ instance.my_notes|linebreaks }} 
+            {% else %} 
+            no notes... 
             {% endif %}</div>
 
 <br>
