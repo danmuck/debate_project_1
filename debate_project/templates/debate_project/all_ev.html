@@ -71,14 +71,14 @@ all-evidence:
                   <a href="/ev_editor/{{ instance.id }}" class="list-group-item list-group-item-action bg-light">
                     <div class="d-flex w-100 justify-content-between">
                       
-                      <h5 class="mb-1 text-danger">[ {{ instance.title}} ]</h5>
+                      <h5 class="mb-1 text-danger">[--- {{ instance.title|linebreaks }} ---]</h5>
 
                     </div>
                     <hr>
                     <br>
                         <figure class='bg-light'>
                           <blockquote class="blockquote fs-6">
-                            <p>{{ instance.description }}</p>
+                            <p>{{ instance.description|linebreaks }}</p>
                           </blockquote>
                           <figcaption class="blockquote-footer text-danger">
                           in reference to: {{ instance.speaker}}
@@ -142,7 +142,7 @@ all-evidence:
                   <a href="/ev_editor/{{ instance.id }}" class="list-group-item list-group-item-action bg-light">
                     <div class="d-flex w-100 justify-content-between">
                       
-                      <h5 class="mb-1 text-info">[ {{ instance.title|linebreaks}} ]</h5>
+                      <h5 class="mb-1 text-info">[--- {{ instance.title|linebreaks}} ---]</h5>
 
                     </div>
                     <hr>
