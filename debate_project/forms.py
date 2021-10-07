@@ -21,6 +21,15 @@ class EvidenceList(forms.ModelForm):
                 'rows': 10,
                 'cols': 80,
             }))
+    my_notes = forms.CharField(
+        label= '',
+        widget=forms.Textarea(
+            attrs={
+                'class': 'Notes',
+                'placeholder': 'Notes:',
+                'rows': 10,
+                'cols': 80,
+            }))            
     speaker = forms.CharField(
         label='',
         widget=forms.TextInput(
