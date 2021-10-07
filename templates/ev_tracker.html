@@ -66,6 +66,23 @@
                     <p class="mb-1">supporing evidence</p>
                     <small class="text-muted">And some muted small print.</small>
                   </a>
+
+
+                  {% for ev in evidence %}
+                  {% if ev.speaker == 'Emily Parker' or ev.speaker == 'Jeff Jarvis' %}
+                  <a href="/evidence/{{ev.id}}" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                      
+                      <h5 class="mb-1">[ {{ ev.title }} ]</h5>
+                    </div>
+                      <br>
+                      <div class="d-flex w-100 justify-content-between">
+                            <p class="mb-1"> {{ ev.description }}</p>
+                            <small>{{ ev.speaker }} </small>
+                      </div>
+                    <small class="text-muted">{{ ev.source }}</small>
+                  </a>
+                  {% endfor %}
                 </div>
             </div>
 
