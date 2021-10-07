@@ -6,9 +6,9 @@ from .forms import EvidenceList
 # Create your views here.
 
 def main_ev_view(request):
-    obj = Evidence.objects.get(id=1)
+    queryset = Evidence.objects.all()
     context = {
-        'object': obj
+        'object_list': queryset
     }
     return render(request, 'debate_project/main_ev.html', context)
     
