@@ -13,34 +13,39 @@ all-evidence:
     <div class="container">
         <h2 class="fs-4 text-center text-light"> moderated by john donvan</h2>
         <article class="row">
-
-{% comment %} #FOR {% endcomment %}
             <div class="container for-motion col-sm bg-danger">
                 <h2 class='text-center'>for-motion:</h2>
                 <h3 class='fs-4'>jeff jarvis <br> emily parker </h3>
                 <hr>
                 
                 <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-action bg-light">
+
+{% for instance in object_list %}
+{% comment %} #FOR {% endcomment %}
+{% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' or instance.speaker == 'FOR' %}
+
+                  <a href="/evidence/{{ instance.id }}" class="list-group-item list-group-item-action bg-light">
                     <div class="d-flex w-100 justify-content-between">
                       
-                      <h5 class="mb-1">[ From Black Lives Matter and the Women’s March to local and national political campaigns, social media is the driving force behind political organizing today and thus serves as a buttress for modern democracy. ]</h5>
+                      <h5 class="mb-1"> {{ instance.title}}[ From Black Lives Matter and the Women’s March to local and national political campaigns, social media is the driving force behind political organizing today and thus serves as a buttress for modern democracy. ]</h5>
 
                     </div>
                     <hr>
                     <br>
                         <figure class='bg-light'>
                           <blockquote class="blockquote fs-6">
-                            <p>"Social media is a tool. It does not single-handedly create revolutions nor does it single-handedly bring about a change in government."</p>
+                            <p>{{ instance.description }} "Social media is a tool. It does not single-handedly create revolutions nor does it single-handedly bring about a change in government."</p>
                           </blockquote>
                           <figcaption class="blockquote-footer">
+                          {{ instance.speaker}}
                             emily parker
                           </figcaption>
                         </figure>
 
 
-                    <small class="text-muted">And some muted small print.</small>
+                    <small class="text-muted"> {{ instance.source }} And some muted small print.</small>
                   </a>
+{% endif %}
 
 
 
@@ -76,7 +81,6 @@ all-evidence:
 
                 </div>
             </div>
-
 {% comment %} #AGAINST {% endcomment %}
             <div class="container against-motion col-sm bg-info">
                 <h2 class='text-center'>against-motion:</h2>
