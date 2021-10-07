@@ -113,13 +113,13 @@ all-evidence:
 <br>
 <div class="container bg-secondary rounded p-5">
 {% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' or instance.speaker == 'FOR' %}
-<h2 class="fs-3 p-3 pe-5 text-danger"> 
+<div class="fs-3 p-3 pe-5 text-danger bg-light rounded"> 
 {{ instance.title|linebreaks }}
-</h2> 
+</div> 
 {% elif instance.speaker == 'Roger McNamee' or instance.speaker == 'Franklin Foer' or instance.speaker == 'AGAINST' %}
-<h2 class="fs-3 p-3 pe-5 text-info"> 
+<div class="fs-3 p-3 pe-5 text-info bg-light rounded"> 
 {{ instance.title|linebreaks }}
-</h2> 
+</div> 
 {% endif %}
     <br>
     <div class='bg-dark text-light rounded p-2'>{% if instance.description %} 
