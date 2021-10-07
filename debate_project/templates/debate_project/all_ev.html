@@ -111,13 +111,12 @@ all-evidence:
 <br>
 {% for instance in object_list %}
 <br>
-<div class="container bg-secondary rounded p-3">
-<p class="">{{ instance.id }}. 
-<h2 class="fs-3 "> 
+<div class="container bg-secondary rounded p-5">
+<h2 class="fs-3 p-3"> 
 {{ instance.title|linebreaks }}
 </h2> 
     <br>
-    <p class='container bg-dark rounded'>{% if instance.description %} 
+    <p class='bg-dark'>{% if instance.description %} 
             {{ instance.description|linebreaks }} 
             {% else %} 
             Coming Soon... 
