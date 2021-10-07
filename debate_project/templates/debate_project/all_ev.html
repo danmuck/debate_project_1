@@ -112,15 +112,15 @@ all-evidence:
 {% for instance in object_list %}
 <br>
 <div class="container bg-secondary rounded p-5">
-<h2 class="fs-3 p-3"> 
+<h2 class="fs-3 p-3 pe-5"> 
 {{ instance.title|linebreaks }}
 </h2> 
     <br>
-    <p class='bg-dark'>{% if instance.description %} 
+    <div class='bg-dark text-light rounded p-2'>{% if instance.description %} 
             {{ instance.description|linebreaks }} 
             {% else %} 
             Coming Soon... 
-            {% endif %}</p>
+            {% endif %}</div>
 
 <br>
     {% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' or instance.speaker == 'FOR' %}
