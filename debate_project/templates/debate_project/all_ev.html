@@ -123,13 +123,17 @@ all-evidence:
 {% endif %}
     <br>
     <div class='bg-dark text-light rounded p-2'>{% if instance.description %} 
-            info: {{ instance.description|linebreaks }} 
+            info: 
+            <hr>
+            {{ instance.description|linebreaks }} 
             {% else %} 
             no info... 
             {% endif %}</div>
 
     <div class='bg-dark text-light rounded p-2'>{% if instance.my_notes %} 
-            notes: {{ instance.my_notes|linebreaks }} 
+            notes: 
+            <hr>
+            {{ instance.my_notes|linebreaks }} 
             {% else %} 
             no notes... 
             {% endif %}</div>
