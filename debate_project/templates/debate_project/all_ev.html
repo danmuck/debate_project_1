@@ -24,7 +24,7 @@ all-evidence:
 {% comment %} #FOR {% endcomment %}
 {% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' or instance.speaker == 'FOR' %}
 
-                  <a href="/ev_editor/{{ instance.id }}" class="list-group-item list-group-item-action bg-light">
+                  <a href="{{ instance.source }}" class="list-group-item list-group-item-action bg-light">
                     <div class="d-flex w-100 justify-content-between">
                       
                       <h5 class="mb-1 text-danger">[---
@@ -68,7 +68,6 @@ all-evidence:
 {% comment %} #FOR {% endcomment %}
 {% if instance.speaker == 'Roger McNamee' or instance.speaker == 'Franklin Foer' or instance.speaker == 'AGAINST' %}
 
-                  <a href="/ev_editor/{{ instance.id }}" class="list-group-item list-group-item-action bg-light">
                     <div class="d-flex w-100 justify-content-between">
                       
                       <h5 class="mb-1 text-info">[---
@@ -92,6 +91,7 @@ all-evidence:
                         </figure>
 
 
+                  <a href="{{ instance.source }}" class="list-group-item list-group-item-action bg-light">
                     <small class="text-muted"> {{ instance.source }}</small>
                   </a>
 {% endif %}
