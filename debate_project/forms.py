@@ -5,7 +5,7 @@ from .models import Evidence
 
 class EvidenceList(forms.ModelForm):
     title = forms.CharField(
-        label='',
+        label='title:',
         widget=forms.Textarea(
             attrs={
                 'placeholder': 'Point:',
@@ -13,7 +13,7 @@ class EvidenceList(forms.ModelForm):
                 'cols': 60,
             }))
     description = forms.CharField(
-        label= '',
+        label= 'info from source:',
         widget=forms.Textarea(
             attrs={
                 'class': 'Evidence',
@@ -22,14 +22,25 @@ class EvidenceList(forms.ModelForm):
                 'cols': 80,
             }))
     my_notes = forms.CharField(
-        label= '',
+        label= 'notes:',
         widget=forms.Textarea(
             attrs={
                 'class': 'Notes',
                 'placeholder': 'Notes:',
                 'rows': 10,
                 'cols': 80,
-            }))            
+                'required': False,
+            })) 
+    opposed = forms.CharField(
+        label= 'opposition:',
+        widget=forms.Textarea(
+            attrs={
+                'class': 'opposed',
+                'placeholder': 'Opposition:',
+                'rows': 10,
+                'cols': 80,
+                'required': False,
+            }))                        
     speaker = forms.CharField(
         label='',
         widget=forms.TextInput(
@@ -40,6 +51,7 @@ class EvidenceList(forms.ModelForm):
         label='',
         widget=forms.URLInput(
             attrs={
+                'required': False,
                 'placeholder': 'Source:',
             }))
 
@@ -49,6 +61,7 @@ class EvidenceList(forms.ModelForm):
             'title',
             'description',
             'my_notes',
+            'opposed',
             'speaker',
             'source'
         ]
