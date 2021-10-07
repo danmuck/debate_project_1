@@ -46,9 +46,9 @@ urlpatterns = [
 
     path('ev_home/', main_ev_view, name='ev_home'),
     path('evidence/', all_ev_view, name='evidence'),
-    path('new_ev/', new_ev_view, name='new'),
-    path('ev_editor/<int:ev_id>/', ev_editor, name='editor'),
-    path('delete_ev/<int:ev_id>/', delete_ev_view, name='delete'),
+    path('new_ev/', new_ev_view, name='ev_new'),
+    path('ev_editor/<int:ev_id>/', ev_editor, name='ev_editor'),
+    path('delete_ev/<int:ev_id>/', delete_ev_view, name='ev_delete'),
 
 
 
