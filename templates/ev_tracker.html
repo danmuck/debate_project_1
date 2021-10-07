@@ -68,22 +68,6 @@
                   </a>
 
 
-                  {% for instance in object_list %}
-                  {% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' %}
-                  <a href="/evidence/{{instance.id}}" class="list-group-item list-group-item-action">
-                    <div class="d-flex w-100 justify-content-between">
-                      
-                      <h5 class="mb-1">[ {{ instance.title }} ]</h5>
-                    </div>
-                      <br>
-                      <div class="d-flex w-100 justify-content-between">
-                            <p class="mb-1"> {{ instance.description }}</p>
-                            <small>{{ instance.speaker }} </small>
-                      </div>
-                    <small class="text-muted">{{ instance.source }}</small>
-                  </a>
-                  {% endif %}
-                  {% endfor %}
 
 
                 </div>
