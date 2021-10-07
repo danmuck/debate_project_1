@@ -20,32 +20,18 @@ all-evidence:
                 
                 <div class="list-group">
 
-{% for instance in object_list %}
-{% comment %} #FOR {% endcomment %}
-{% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' or instance.speaker == 'FOR' %}
-
-                  <a href="/ev_editor/{{ instance.id }}" class="list-group-item list-group-item-action bg-light">
+                  <a href="#" class="list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-between">
                       
-                      <h5 class="mb-1"> {{ instance.title}}</h5>
-
+                      <h5 class="mb-1">[ From Black Lives Matter and the Women’s March to local and national political campaigns, social media is the driving force behind political organizing today and thus serves as a buttress for modern democracy. ]</h5>
                     </div>
-                    <hr>
-                    <br>
-                        <figure class='bg-light'>
-                          <blockquote class="blockquote fs-6">
-                            <p>{{ instance.description }}</p>
-                          </blockquote>
-                          <figcaption class="blockquote-footer">
-                          {{ instance.speaker}}
-                          </figcaption>
-                        </figure>
-
-
-                    <small class="text-muted"> {{ instance.source }}</small>
+                      <br>
+                      <div class="d-flex w-100 justify-content-between">
+                            <p class="mb-1">"Social media is a tool. It does not single-handedly create revolutions nor does it single-handedly bring about a change in government."</p>
+                            <small>emily parker</small>
+                      </div>
+                    <small class="text-muted">And some muted small print.</small>
                   </a>
-{% endif %}
-{% endfor %}
 
 
 
@@ -74,7 +60,32 @@ all-evidence:
                     <p class="mb-1">supporing evidence</p>
                     <small class="text-muted">And some muted small print.</small>
                   </a>
+{% for instance in object_list %}
+{% comment %} #FOR {% endcomment %}
+{% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' or instance.speaker == 'FOR' %}
 
+                  <a href="/ev_editor/{{ instance.id }}" class="list-group-item list-group-item-action bg-light">
+                    <div class="d-flex w-100 justify-content-between">
+                      
+                      <h5 class="mb-1"> {{ instance.title}}</h5>
+
+                    </div>
+                    <hr>
+                    <br>
+                        <figure class='bg-light'>
+                          <blockquote class="blockquote fs-6">
+                            <p>{{ instance.description }}</p>
+                          </blockquote>
+                          <figcaption class="blockquote-footer">
+                          {{ instance.speaker}}
+                          </figcaption>
+                        </figure>
+
+
+                    <small class="text-muted"> {{ instance.source }}</small>
+                  </a>
+{% endif %}
+{% endfor %}
 
 
 
@@ -119,9 +130,35 @@ all-evidence:
                     <p class="mb-1">supporing evidence</p>
                     <small class="text-muted">And some muted small print.</small>
                   </a>
+
+{% for instance in object_list %}
+{% comment %} #FOR {% endcomment %}
+{% if instance.speaker == 'Roger McNamee' or instance.speaker == 'Franklin Foer' or instance.speaker == 'AGAINST' %}
+
+                  <a href="/ev_editor/{{ instance.id }}" class="list-group-item list-group-item-action bg-light">
+                    <div class="d-flex w-100 justify-content-between">
+                      
+                      <h5 class="mb-1"> {{ instance.title}}</h5>
+
+                    </div>
+                    <hr>
+                    <br>
+                        <figure class='bg-light'>
+                          <blockquote class="blockquote fs-6">
+                            <p>{{ instance.description }}</p>
+                          </blockquote>
+                          <figcaption class="blockquote-footer">
+                          {{ instance.speaker}}
+                          </figcaption>
+                        </figure>
+
+
+                    <small class="text-muted"> {{ instance.source }}</small>
+                  </a>
+{% endif %}
+{% endfor %}
+
                 </div>                           
-
-
             </div>
         </article>
     
