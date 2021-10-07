@@ -6,39 +6,6 @@ all-evidence:
 
 {% block content %}
 <br>
-{% for instance in object_list %}
-<br>
-<div class="container bg-secondary rounded p-3">
-<p class="">{{ instance.id }}. 
-<h2 class="fs-3 "> 
-{{ instance.title }}
-</h2> 
-    <br>
-    <p>{% if instance.description %} 
-            {{ instance.description|linebreaks }} 
-            {% else %} 
-            Coming Soon... 
-            {% endif %}</p>
-
-<br>
-    {% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' %}
-            <p class="fs-4 text-danger">{{ instance.speaker }} </p>
-            {% elif instance.speaker == 'Roger McNamee' or instance.speaker == 'Franklin Foer'%}
-            <p class="fs-4 text-info">{{ instance.speaker }} </p>
-            {% else %}
-            <p class="fs-4 text-dark">{{ instance.speaker }} </p>
-            {% endif %}
-
-    <p class="fs-6 container-fluid text-dark">  
-        <a href="{{ instance.source }}" class=''> [source] </a> 
-
-        <div class='text-end'><a href="/delete/{{ instance.id }}" class='fs-6 text-dark'>[ DEL ]</a>
-            <a href="{{ instance.get_absolute_url }}" class='fs-6 text-dark' style='None'> [EDIT] </a>
-         </div> 
-    </p>
-</p>
-</div>
-{% endfor %}
 
 
 
@@ -170,40 +137,40 @@ all-evidence:
     </div>
     
 
+<br>
+{% for instance in object_list %}
+<br>
+<div class="container bg-secondary rounded p-3">
+<p class="">{{ instance.id }}. 
+<h2 class="fs-3 "> 
+{{ instance.title }}
+</h2> 
+    <br>
+    <p>{% if instance.description %} 
+            {{ instance.description|linebreaks }} 
+            {% else %} 
+            Coming Soon... 
+            {% endif %}</p>
+
+<br>
+    {% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' %}
+            <p class="fs-4 text-danger">{{ instance.speaker }} </p>
+            {% elif instance.speaker == 'Roger McNamee' or instance.speaker == 'Franklin Foer'%}
+            <p class="fs-4 text-info">{{ instance.speaker }} </p>
+            {% else %}
+            <p class="fs-4 text-dark">{{ instance.speaker }} </p>
+            {% endif %}
+
+    <p class="fs-6 container-fluid text-dark">  
+        <a href="{{ instance.source }}" class=''> [source] </a> 
+
+        <div class='text-end'><a href="/delete/{{ instance.id }}" class='fs-6 text-dark'>[ DEL ]</a>
+            <a href="{{ instance.get_absolute_url }}" class='fs-6 text-dark' style='None'> [EDIT] </a>
+         </div> 
+    </p>
+</p>
+</div>
+{% endfor %}
+
 {% endblock %}
-
-
-    <h1 class='bg-dark text-warning p-3'> ../evidence_tracker: [MAIN POINTS LINK TO FURTHER]</h1>
-    <div class="container">
-        <h2 class="fs-4 text-center text-light"> moderated by john donvan</h2>
-        <article class="row">
-
-{% comment %} #FOR {% endcomment %}
-            <div class="container for-motion col-sm bg-danger">
-                <h2 class='text-center'>for-motion:</h2>
-                <h3 class='fs-4'>jeff jarvis <br> emily parker </h3>
-                <hr>
-                
-                <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-action bg-light">
-                    <div class="d-flex w-100 justify-content-between">
-                    
-
-                </div>
-            </div>
-
-{% comment %} #AGAINST {% endcomment %}
-            <div class="container against-motion col-sm bg-info">
-                <h2 class='text-center'>against-motion:</h2>
-                <h3 class='fs-4'>franklin foer <br> roger mcnamee </h3>
-                <hr>     
-
-                <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-action">
-                    <div class="d-flex w-100 justify-content-between">
-
-                </div>
-            </div>
-        </article> 
-    </div>
                                       
