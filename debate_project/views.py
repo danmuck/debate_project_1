@@ -54,4 +54,4 @@ def ev_editor(request, ev_id):
     context = {
         'form': form
     }
-    return render(request, 'debate_project/new_ev.html', context, initial_data)
+    return render(request, 'debate_project/new_ev.html', context)
