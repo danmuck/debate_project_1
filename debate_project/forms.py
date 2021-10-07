@@ -31,16 +31,16 @@ class EvidenceList(forms.ModelForm):
                 'cols': 80,
                 'required': False,
             })) 
-    opposed = forms.CharField(
-        label= 'opposition:',
-        widget=forms.Textarea(
-            attrs={
-                'class': 'opposed',
-                'placeholder': 'Opposition:',
-                'rows': 10,
-                'cols': 80,
-                'required': False,
-            }))                        
+    # opposed = forms.CharField(
+    #     label= 'opposition:',
+    #     widget=forms.Textarea(
+    #         attrs={
+    #             'class': 'opposed',
+    #             'placeholder': 'Opposition:',
+    #             'rows': 10,
+    #             'cols': 80,
+    #             'required': False,
+    #         }))                        
     speaker = forms.CharField(
         label='',
         widget=forms.TextInput(
@@ -61,7 +61,7 @@ class EvidenceList(forms.ModelForm):
             'title',
             'description',
             'my_notes',
-            'opposed',
+            # 'opposed',
             'speaker',
             'source'
         ]
