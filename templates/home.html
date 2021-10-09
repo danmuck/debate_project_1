@@ -7,7 +7,7 @@ home:
 {% block content %}
 <h1 class='bg-dark text-warning p-3'> ../home</h1>
 <hr>
-<div class='m-2 rounded-pill bg-warning text-dark'>this is you: {{ request.user }}</div>
+<div class='m-3 p-3 rounded-pill bg-warning text-dark'>this is you: <span class='text-danger'>{{ request.user }}</span></div>
 <br>
 <a href='/ev_home/' class="badge bg-warning text-dark">debate project</a>
 <br>
