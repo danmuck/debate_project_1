@@ -1,10 +1,11 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-warning text-dark">
     <div class="container-fluid">
+        <a class="navbar-brand text-dark" href="#">danmuck. //</a>
+
         {% for group in request.user.groups.all %}
         {% if group.name == 'admin' %}
-        <a class="navbar-brand text-dark" href="/admin/">danmuck. //</a>
+        <a class="navbar-brand text-dark" href="/admin/">danmuck.admin //</a>
         {% else %}
-        <a class="navbar-brand text-dark" href="#">danmuck. //</a>
         {% endif %}
         {% endfor %}
         {% comment %} <button
