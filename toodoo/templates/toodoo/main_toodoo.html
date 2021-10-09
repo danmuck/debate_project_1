@@ -6,6 +6,9 @@ ToDo:
 
 {% block content %}
 <br>
+{% for group in request.user.groups.all %}
+{% if group.name == 'admin' %}
+
 <div class="container text-center text-warning">
 <a href="/list/"> [INDEX] </a>
 <a href="/new/"> [NEW] </a>
@@ -13,6 +16,9 @@ ToDo:
 <a href="/delete/1/"> [DEL] </a>
 <a href="/editor/1/"> [EDIT] </a>
 </div>
+
+{% endif %}
+{% endfor %}
 <hr>
 
 <h1>{{ object.title }}</h1>
