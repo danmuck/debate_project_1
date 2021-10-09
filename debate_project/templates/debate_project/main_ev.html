@@ -8,12 +8,14 @@ ev_home:
 
 <br>
 <div class="container text-center text-warning">
-<a href="/evidence/"> [INDEX] </a>
+<a href="/evidence/"> [ev_tracker] </a>
+<a href="/sources/"> [sources] </a>
+<a href="/postal/"> [blog] </a>
+ :|:
 
 {% for group in request.user.groups.all %}
 {% if group.name == 'admin' %}
 <a href="/new_ev/"> [NEW] </a>
- :|:
 <a href="#"> [DEL] </a>
 <a href="/ev_editor/2/"> [EDIT] </a>
 {% endif %}
