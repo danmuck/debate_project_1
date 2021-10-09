@@ -40,13 +40,13 @@ sources:
     <br>
 
             {% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' or instance.speaker == 'FOR' %}
-            <p class=" fs-4 p-3 bg-dark text-danger rounded-pill">{{ instance.speaker }} <a href="{{ instance.source }}" class='fs-6 bg-dark text-light mx-auto text-center' style='none'>  {{ instance.source }}  </a></p>
+            <p class="text-center fs-4 p-3 bg-dark text-danger rounded-pill">{{ instance.speaker }} <a href="{{ instance.source }}" class='fs-6 bg-dark text-light mx-auto text-center' style='none'>  {{ instance.source }}  </a></p>
 
             {% elif instance.speaker == 'Roger McNamee' or instance.speaker == 'Franklin Foer' or instance.speaker == 'AGAINST' %}
-            <p class=" fs-4 p-3 bg-dark text-info rounded-pill">{{ instance.speaker }} <a href="{{ instance.source }}" class='fs-6 bg-dark text-light mx-auto text-center' style='none'>  {{ instance.source }}  </a> </p>
+            <p class="text-center fs-4 p-3 bg-dark text-info rounded-pill">{{ instance.speaker }} <a href="{{ instance.source }}" class='fs-6 bg-dark text-light mx-auto text-center' style='none'>  {{ instance.source }}  </a> </p>
 
             {% else %}
-            <p class=" fs-4 p-3 bg-dark text-dark rounded-pill">{{ instance.speaker }} <a href="{{ instance.source }}" class=' fs-6 bg-dark text-light mx-auto text-center' style='none'>  {{ instance.source }}  </a> </p>
+            <p class="text-center fs-4 p-3 bg-dark text-dark rounded-pill">{{ instance.speaker }} <a href="{{ instance.source }}" class=' fs-6 bg-dark text-light mx-auto text-center' style='none'>  {{ instance.source }}  </a> </p>
             {% endif %}
     {% if user.username == 'danmuck' %}
     <p class="fs-6 container-fluid text-dark">  
