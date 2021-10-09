@@ -41,6 +41,13 @@ def all_ev_view(request):
     }
     return render(request, 'debate_project/all_ev.html', context)
 
+def sources_ev_view(request):
+    queryset = Evidence.objects.all()
+    context = {
+        'object_list': queryset
+    }
+    return render(request, 'debate_project/sources_ev.html', context)
+
 #edit items
 def ev_editor(request, ev_id):
     initial_data = 'ev_EDIT:'
