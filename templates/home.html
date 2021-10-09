@@ -5,9 +5,11 @@ home:
 {% endblock %}
 
 {% block content %}
-<h1>home:</h1>
-<p>this is home</p>
+<h1 class='bg-dark text-warning p-3'> ../home</h1>
+<hr>
+<div class='m-2 rounded-pill bg-warning text-dark'>this is you: {{ request.user }}</div>
 <br>
-<p>this is you: {{ request.user }}</p>
+<a href='/ev_home/' class="badge bg-warning text-dark">debate project</a>
+<br>
 {% endblock %}
 
