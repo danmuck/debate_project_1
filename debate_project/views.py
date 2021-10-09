@@ -5,6 +5,10 @@ from .forms import EvidenceList
 
 # Create your views here.
 
+def final_paper_view(request):
+    return render(request, 'debate_project/final_paper.html', {})
+
+#ev_editor
 def main_ev_view(request):
     queryset = Evidence.objects.all()
     context = {
@@ -33,22 +37,6 @@ def delete_ev_view(request, ev_id):
     }
     return render(request, 'debate_project/delete_ev.html', context)
 
-
-def all_ev_view(request):
-    queryset = Evidence.objects.all()
-    context = {
-        'object_list': queryset
-    }
-    return render(request, 'debate_project/all_ev.html', context)
-
-def sources_ev_view(request):
-    queryset = Evidence.objects.all()
-    context = {
-        'object_list': queryset
-    }
-    return render(request, 'debate_project/sources_ev.html', context)
-
-#edit items
 def ev_editor(request, ev_id):
     initial_data = 'ev_EDIT:'
     try:
@@ -62,3 +50,19 @@ def ev_editor(request, ev_id):
         'form': form
     }
     return render(request, 'debate_project/new_ev.html', context)
+
+#ev_tracker
+def all_ev_view(request):
+    queryset = Evidence.objects.all()
+    context = {
+        'object_list': queryset
+    }
+    return render(request, 'debate_project/all_ev.html', context)
+
+#sources
+def sources_ev_view(request):
+    queryset = Evidence.objects.all()
+    context = {
+        'object_list': queryset
+    }
+    return render(request, 'debate_project/sources_ev.html', context)

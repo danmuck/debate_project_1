@@ -20,7 +20,7 @@ from pages.views import home_view, contact_view, ev_tracker_view, postal_view, a
 from toodoo.views import all_toodoo_view, new_toodoo_view, toodoo_editor, main_toodoo_view, delete_toodoo_view
 
 #SCHOOL
-from debate_project.views import all_ev_view, new_ev_view, main_ev_view, delete_ev_view, ev_editor, sources_ev_view
+from debate_project.views import all_ev_view, new_ev_view, main_ev_view, delete_ev_view, ev_editor, sources_ev_view, final_paper_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -45,6 +45,7 @@ urlpatterns = [
 #SCHOOL
 
     path('ev_home/', main_ev_view, name='ev_home'),
+    path('final_paper/', final_paper_view, name='final_paper'),
     path('evidence/', all_ev_view, name='evidence'),
     path('sources/', sources_ev_view, name='sources'),
 
