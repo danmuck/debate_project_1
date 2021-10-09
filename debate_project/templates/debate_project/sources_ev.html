@@ -22,7 +22,7 @@ sources:
 </div> 
 {% endif %}
     <br>
-    <div class='bg-dark text-light rounded p-2'>{% if instance.description %} 
+    <div class='bg-dark text-light rounded py-3 px-4 mx-5'>{% if instance.description %} 
             info: 
             <hr>
             {{ instance.description|linebreaks }} 
@@ -30,7 +30,7 @@ sources:
             no info... 
             {% endif %}</div>
     <br>
-    <div class='bg-dark text-light rounded p-2'>{% if instance.my_notes %} 
+    <div class='bg-dark text-light rounded py-3 px-4 mx-5'>{% if instance.my_notes %} 
             notes: 
             <hr>
             {{ instance.my_notes|linebreaks }} 
@@ -55,7 +55,6 @@ sources:
          </div> 
     </p>
     {% endif %}
-</p>
 </div>
 {% endfor %}
 {% endblock %}
