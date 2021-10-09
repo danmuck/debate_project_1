@@ -1,6 +1,12 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-warning text-dark">
     <div class="container-fluid">
+        {% for group in request.user.groups.all %}
+        {% if group.name == 'admin' %}
         <a class="navbar-brand text-dark" href="/admin/">danmuck. //</a>
+        {% endif %}
+        {% else %}
+        <a class="navbar-brand text-dark" href="#">danmuck. //</a>
+        {% endfor %}
         {% comment %} <button
             class="navbar-toggler"
             type="button"
