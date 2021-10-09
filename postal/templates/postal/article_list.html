@@ -19,6 +19,7 @@ blog:
 
 <br>
 <h1 class='bg-dark text-warning p-3'> ../blog_posts</h1>
+<hr>
 <br>
 {% for instance in object_list %}
     <p>{{ instance.id }}. <a href="{{ instance.get_absolute_url }}" class='fs-3 badge badge-success' style='None'>{{ instance.subject }} </a>
