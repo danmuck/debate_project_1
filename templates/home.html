@@ -7,9 +7,9 @@ home:
 {% block content %}
 <h1 class='bg-dark text-warning p-3'> ../home</h1>
 <hr>
-<div class='m-3 p-3 rounded-pill bg-warning text-dark'>this is you: <span class='text-danger'>{{ request.user }}</span></div>
+<div class='m-3 p-3 rounded-pill bg-warning text-dark'>this is you: <span class='text-danger strong'>[ {{ request.user }} ]</span></div>
 <br>
-<a href='/ev_home/' class="badge bg-warning text-dark fs-3 p-3">debate project</a>
+<a href='/ev_home/' class="badge bg-warning text-dark fs-3 p-3 text-decoration-none">debate project</a>
 <br>
 {% endblock %}
 
