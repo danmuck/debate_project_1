@@ -24,7 +24,9 @@ article:
 <br><br>
 {% comment %} <a href="/blog/create/"> NEW </a><br><br><hr><br> {% endcomment %}
 
-<h1 class='bg-success mx-4 ps-5 rounded text-start'>{{ object.title }}</h1>
+<div class="rounded-3 p-5 bg-warning container">
+
+<h1 class='bg-secondary mx-4 p-2 rounded text-start'>{{ object.title }}</h1>
 <div class='p-3 mx-5 border-start'>
         {% if object.subject %} 
         {{ object.subject }} 
@@ -39,4 +41,5 @@ article:
         {% endif %}</div>
 <div class="fs-5 bg-secondary mx-5 p-2 rounded"> {{ object.date }} </div>
 
+</div>
 {% endblock %}
