@@ -19,6 +19,11 @@ class ArticleListView(ListView):
     model = Article
     template_name = "postal/article_list.html"
 
+class ArticleDebateView(ListView):
+    queryset = Article.objects.filter(title__startswith='debate').order_by('pk') # <app_name>/<model_name>_list.html #this is the default path it looks for template 
+    model = Article
+    template_name = "postal/article_debate.html"
+    
 class ArticleCreateView(CreateView):
     queryset = Article.objects.all() # <app_name>/<model_name>_create.html #this is the default path it looks for template 
     model = Article
