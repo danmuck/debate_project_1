@@ -10,7 +10,7 @@ article:
 {% if group.name == 'admin' %}
 <br>
 <div class="container text-center text-warning">
-<a href="/postal/articles/"> [INDEX] </a>
+<a href="/admin/postal/article/"> [ADMIN] </a>
 <a href="/postal/create/"> [NEW] </a>
  :|:
 <a href="/postal/{{ object.pk }}/update/"> [EDIT] </a>
@@ -24,19 +24,19 @@ article:
 <br><br>
 {% comment %} <a href="/blog/create/"> NEW </a><br><br><hr><br> {% endcomment %}
 
-<h1 class='bg-success mx-4 ps-5 rounded'>{{ object.title }}</h1>
-<p class='p-3 mx-5 border-start'>
+<h1 class='bg-success mx-4 ps-5 rounded text-start'>{{ object.title }}</h1>
+<div class='p-3 mx-5 border-start'>
         {% if object.subject %} 
         {{ object.subject }} 
         {% else %} 
         n/a 
-        {% endif %}</p>
-<p class='p-3 mx-5'>
+        {% endif %}</div>
+<div class='p-3 mx-5 text-start'>
         {% if object.blogpost %} 
-        {{ object.blogpost|linebreaksbr }} 
+        {{ object.blogpost|linebreaks }} 
         {% else %} 
         Coming Soon... 
-        {% endif %}</p>
-<p class="fs-5 bg-secondary mx-5 p-2 rounded"> {{ object.date }} </p>
+        {% endif %}</div>
+<div class="fs-5 bg-secondary mx-5 p-2 rounded"> {{ object.date }} </div>
 
 {% endblock %}
