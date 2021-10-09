@@ -15,7 +15,7 @@ from django.views.generic import (
 # Create your views here.
 
 class ArticleListView(ListView):
-    queryset = Article.objects.all() # <app_name>/<model_name>_list.html #this is the default path it looks for template 
+    queryset = Article.objects.all().order_by('pk') # <app_name>/<model_name>_list.html #this is the default path it looks for template 
     model = Article
     template_name = "postal/article_list.html"
 
