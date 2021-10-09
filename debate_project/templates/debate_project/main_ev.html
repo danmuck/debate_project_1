@@ -25,30 +25,10 @@ ev_home:
 
 </div>
 
-
-{% comment %} <br>
-<a href="/evidence/"> LIST </a><br>
-<a href="/new_ev/"> NEW </a><br>
-<a href="/delete_ev/1/"> DEL </a><br>
-<a href="/ev_editor/1/"> EDIT </a>
-<br> {% endcomment %}
 <hr>
+<br>
+<h1 class='bg-dark text-warning p-3'> ../debate_project:home</h1>
+<br>
 
-<h1>{{ object.title }}</h1>
-<p>{% if object.description %} 
-        {{ object.description|linebreaksbr }} 
-        {% else %} 
-        Coming Soon... 
-        {% endif %}</p>
-
-{% if object.speaker == 'Emily Parker' or object.speaker == 'Jeff Jarvis' %}
-        <p class="fs-4 text-danger">{{ object.speaker }} </p>
-        {% elif object.speaker == 'Roger McNamee' or object.speaker == 'Franklin Foer'%}
-        <p class="fs-4 text-info">{{ object.speaker }} </p>
-        {% else %}
-        <p class="fs-4 text-dark">{{ object.speaker }} </p>
-        {% endif %}
-
-<p class="fs-4"> {{ object.date }} </p>
 
 {% endblock %}
