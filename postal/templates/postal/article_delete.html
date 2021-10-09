@@ -6,6 +6,9 @@ remove-post:
 
 {% block content %}
 <br>
+{% for group in request.user.groups.all %}
+{% if group.name == 'admin' %}
+
 <h2 class='text-danger'>Delete Post:</h2>
 <form method='POST'>
     {% csrf_token %}
@@ -14,6 +17,9 @@ remove-post:
     <br>
     <input type="submit" value="DELETE">
 </form> 
+
+{% endif %}
+{% endfor %}
 
 {% comment %} <form action="http://www.google.com/search" method="get">
     <input type="text" name="q" placeholder="your search">
