@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+article:
+{% endblock %}
+
+{% block content %}
+
+{% for group in request.user.groups.all %}
+{% if group.name == 'admin' %}
+<br>
+<div class="container text-center text-warning">
+<a href="/admin/postal/article/"> [ADMIN] </a>
+<a href="/postal/create/"> [NEW] </a>
+ :|:
+<a href="/postal/{{ object.pk }}/update/"> [EDIT] </a>
+<a href="/postal/{{ object.pk }}/delete/"> [DEL] </a>
+
+{% endif %}
+{% endfor %}
+
+<br>
+<a href="/postal/articles/"> LIST ALL </a>
+<br><br>
+{% comment %} <a href="/blog/create/"> NEW </a><br><br><hr><br> {% endcomment %}
+
+<div class="rounded-3 p-5 bg-secondary container">
+
+{% for instance in object_list %}
+<h1 class='bg-dark mx-4 p-2 rounded text-start'>{{ object.title }}</h1>
+<div class='p-3 mx-5 border-start'>
+        {% if object.subject %} 
+        {{ object.subject }} 
+        {% else %} 
+        n/a 
+        {% endif %}</div>
+<div class='p-3 mx-5 text-start'>
+        {% if object.blogpost %} 
+        {{ object.blogpost|linebreaks }} 
+        {% else %} 
+        Coming Soon... 
+        {% endif %}</div>
+<div class="fs-5 bg-dark mx-5 p-2 rounded"> {{ object.date }} </div>
+
+{% endfor %}
+</div>
+{% endblock %}
