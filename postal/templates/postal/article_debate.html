@@ -6,6 +6,7 @@ article:
 
 {% block content %}
 
+{% if user.username == 'danmuck' %}
 {% for group in request.user.groups.all %}
 {% if group.name == 'admin' %}
 <br>
@@ -18,6 +19,7 @@ article:
 
 {% endif %}
 {% endfor %}
+{% endif %}
 
 {% include 'debate_nav.html' %}
 <br>
