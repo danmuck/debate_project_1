@@ -19,16 +19,13 @@ article:
 {% endif %}
 {% endfor %}
 
+{% include 'debate_nav.html' %}
 <br>
-<a href="/postal/articles/"> LIST ALL </a>
-<br><br>
-{% comment %} <a href="/blog/create/"> NEW </a><br><br><hr><br> {% endcomment %}
-
 <div class="rounded-3 p-5 bg-secondary container">
 
 {% for object in object_list %}
 <h1 class='bg-dark mx-4 p-2 rounded text-start'>{{ object.title }}</h1>
-<div class='p-3 mx-5 border-start'>
+<div class='p-3 mx-5 border-start text-start'>
         {% if object.subject %} 
         {{ object.subject }} 
         {% else %} 
@@ -41,6 +38,8 @@ article:
         Coming Soon... 
         {% endif %}</div>
 <div class="fs-5 bg-dark mx-5 p-2 rounded"> {{ object.date }} </div>
+<br>
+<br>
 
 {% endfor %}
 </div>
