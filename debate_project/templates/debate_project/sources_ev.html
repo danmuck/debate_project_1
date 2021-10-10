@@ -13,16 +13,16 @@ sources:
 <br>
 <div class="container-md bg-secondary rounded-3 p-5">
 {% if instance.speaker == 'Emily Parker' or instance.speaker == 'Jeff Jarvis' or instance.speaker == 'FOR' %}
-<div class="fs-3 p-3 pe-5 m-3 border-3 border-dark text-danger bg-light rounded-3"> 
+<div class="fs-3 p-3 pe-5 m-3 border-3 border-dark text-danger text-start bg-light rounded-3"> 
 {{ instance.title|linebreaks }}
 </div> 
 {% elif instance.speaker == 'Roger McNamee' or instance.speaker == 'Franklin Foer' or instance.speaker == 'AGAINST' %}
-<div class="fs-3 p-3 pe-5 m-3 border-3 border-dark text-info bg-light rounded-3"> 
+<div class="fs-3 p-3 pe-5 m-3 border-3 border-dark text-info text-start bg-light rounded-3"> 
 {{ instance.title|linebreaks }}
 </div> 
 {% endif %}
     <br>
-    <div class='bg-dark text-light rounded py-3 px-4 mx-5'>{% if instance.description %} 
+    <div class='bg-dark text-light text-start rounded py-3 px-4 mx-5'>{% if instance.description %} 
             info: 
             <hr>
             {{ instance.description|linebreaks }} 
@@ -30,7 +30,7 @@ sources:
             no info... 
             {% endif %}</div>
     <br>
-    <div class='bg-dark text-light rounded py-3 px-4 mx-5'>{% if instance.my_notes %} 
+    <div class='bg-dark text-light text-start rounded py-3 px-4 mx-5'>{% if instance.my_notes %} 
             notes: 
             <hr>
             {{ instance.my_notes|linebreaks }} 
