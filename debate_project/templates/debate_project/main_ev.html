@@ -6,11 +6,10 @@ ev_home:
 
 {% block content %}
 
-<br>
 
 {% for group in request.user.groups.all %}
 {% if group.name == 'admin' %}
-
+        <br>
         <div class="container text-center text-warning">
         <a href="/evidence/" class='link-light text-decoration-none'> [EV_TRACKER] </a>
         <a href="/sources/" class='link-light text-decoration-none'> [SRC] </a>
