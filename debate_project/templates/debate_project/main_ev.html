@@ -6,7 +6,6 @@ ev_home:
 
 {% block content %}
 
-
 {% for group in request.user.groups.all %}
 {% if group.name == 'admin' %}
         <br>
@@ -25,9 +24,9 @@ ev_home:
 
 {% endif %}
 {% endfor %}
-<br>
 
 {% include 'debate_nav.html' %}
+<br>
 
 <h1>THESIS</h1>
 

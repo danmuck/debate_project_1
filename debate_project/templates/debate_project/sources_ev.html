@@ -56,4 +56,23 @@ sources:
     {% endif %}
 </div>
 {% endfor %}
+
+
+{% if user.username == 'danmuck' %}
+{% for group in request.user.groups.all %}
+{% if group.name == 'admin' %}
+<br>
+<br>
+<br>
+<div class="container text-center text-warning">
+<a href="/admin/postal/article/"> [ADMIN] </a>
+<a href="/postal/create/"> [NEW] </a>
+ :|:
+<a href="/postal/{{ object.pk }}/update/"> [EDIT] </a>
+<a href="/postal/{{ object.pk }}/delete/"> [DEL] </a>
+
+{% endif %}
+{% endfor %}
+{% endif %}
+
 {% endblock %}
