@@ -6,26 +6,9 @@ ev_home:
 
 {% block content %}
 
-{% for group in request.user.groups.all %}
-{% if group.name == 'admin' %}
-        <br>
-        <div class="container text-center text-warning">
-        <a href="/evidence/" class='link-light text-decoration-none'> [EV_TRACKER] </a>
-        <a href="/sources/" class='link-light text-decoration-none'> [SRC] </a>
-        <a href="/final_paper/" class='link-light text-decoration-none'> [FNL_DRFT] </a>
-
-        <a href="/postal/articles/" class='link-light text-decoration-none'> [BLOG] </a>
-         :|:
-
-        <a href="/new_ev/"> [NEW] </a>
-        <a href="#"> [DEL] </a>
-        <a href="/ev_editor/2/"> [EDIT] </a>
-        </div>
-
-{% endif %}
-{% endfor %}
-
 {% include 'debate_nav.html' %}
+
+
 <br>
 
 <h1>THESIS</h1>
