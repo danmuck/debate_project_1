@@ -1,3 +1,4 @@
-# [home-for-now](https://danmuck.herokuapp.com)
+# [project_home](https://danmuck.herokuapp.com)
 
-### under_construction
+### Social Media Debate: heroku app
+### ENGL1010 F21 Skjold
